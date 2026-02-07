@@ -1,0 +1,9 @@
+package project
+
+type CreateProjectRequest struct {
+	Name string `json:"name" binding:"required,min=3"`
+}
+
+type UpdateProjectRequest struct {
+	Name string `json:"name" binding:"required,min=3"`
+}
