@@ -8,6 +8,8 @@ import (
 	"gorm.io/gorm"
 
 	"github.com/AnuragDahiwade/task-manager/config"
+
+	"github.com/AnuragDahiwade/task-manager/internal/user"
 )
 
 var DB *gorm.DB
@@ -32,4 +34,11 @@ func ConnectDB() {
 	}
 
 	log.Println("PostgreSQL connected")
+
+	// Enable UUID extension
+	DB.Exec(`CREATE EXTENSION IF NOT EXISTS "pgcrypto"`)
+
+	// Auto migrate
+	DB.AutoMigrate(&user.User{})
+
 }
