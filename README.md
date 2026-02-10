@@ -34,7 +34,6 @@ task-manager/
 ├── internal/
 ├── routes/
 ├── pkg/
-├── docker/
 └── README.md
 
 ---
