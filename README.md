@@ -12,7 +12,6 @@ A production-ready Task Management REST API built with Golang, Gin, PostgreSQL, 
 - Task Management (CRUD + Workflow)
 - Admin Panel
 - Logging, Recovery, Rate Limiting
-- Docker Support
 
 ---
 
@@ -57,12 +56,6 @@ JWT_SECRET=your_secret_key
 
 go mod tidy
 go run cmd/main.go
-
----
-
-## 🐳 Run with Docker
-
-docker-compose up --build
 
 ---
 
